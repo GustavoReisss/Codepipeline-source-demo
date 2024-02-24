@@ -5,23 +5,12 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "installing something"
-  pre_build:
-    commands:
-      - echo "we are in the pre build phase"
+      - echo "Starting Install Phase"
+      - npm install
   build:
     commands:
-      - echo "we are in the build block"
-      - echo "we will run some tests"
-      - grep -Fq "hi!" demo.txt
-      - cd src
-      - mkdir codebuild
-      - cd codebuild
-      - echo "hii!" > result.txt
-  post_build:
-    commands:
-      - echo "we are in the post build phase"
+      - npm run build
 artifacts:
   files:
-    - "src/codebuild/*"
+    - "**/*"
   discart-paths: yes
