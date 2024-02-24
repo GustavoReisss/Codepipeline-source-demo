@@ -14,7 +14,11 @@ phases:
       - echo "we are in the build block"
       - echo "we will run some tests"
       - grep -Fq "hi!" demo.txt
-      - echo "hii!" > result.txt
+      - echo "hii!" > src/codebuild/result.txt
   post_build:
     commands:
       - echo "we are in the post build phase"
+artifacts:
+  files:
+    - "src/codebuild/*"
+  discart-paths: yes
