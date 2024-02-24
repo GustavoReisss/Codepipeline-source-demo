@@ -18,5 +18,5 @@ phases:
 artifacts:
   files:
     - "app/dist/*"
-  base-directory: "app/dist"
+  # base-directory: "app/dist"
   discart-paths: yes
