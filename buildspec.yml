@@ -17,6 +17,6 @@ phases:
       - rm -rf node_modules
 artifacts:
   files:
-    - "app/dist/*"
+    - "app/*"
   # base-directory: "app/dist"
   discart-paths: yes
