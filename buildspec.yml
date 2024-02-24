@@ -14,9 +14,9 @@ phases:
   post_build:
     commands:
       - echo "Removing node_modules"
-      - rmdir node_modules
+      - rm -rf node_modules
 artifacts:
   files:
     - "**/*"
-  base-directory: "dist*"
+  base-directory: "app/dist"
   discart-paths: yes
