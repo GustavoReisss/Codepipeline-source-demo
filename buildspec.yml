@@ -14,6 +14,8 @@ phases:
       - echo "we are in the build block"
       - echo "we will run some tests"
       - grep -Fq "hi!" demo.txt
+      - cd src
+      - mkdir codebuild
       - echo "hii!" > src/codebuild/result.txt
   post_build:
     commands:
