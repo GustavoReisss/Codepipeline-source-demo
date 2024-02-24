@@ -11,7 +11,12 @@ phases:
   build:
     commands:
       - npm run build
+  post_build:
+    commands:
+      - echo "Removing node_modules"
+      - rmdir node_modules
 artifacts:
   files:
-    - "app/dist/*"
+    - "**/*"
+  base-directory: "dist*"
   discart-paths: yes
