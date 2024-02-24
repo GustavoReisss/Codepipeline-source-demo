@@ -16,7 +16,8 @@ phases:
       - grep -Fq "hi!" demo.txt
       - cd src
       - mkdir codebuild
-      - echo "hii!" > src/codebuild/result.txt
+      - cd codebuild
+      - echo "hii!" > result.txt
   post_build:
     commands:
       - echo "we are in the post build phase"
